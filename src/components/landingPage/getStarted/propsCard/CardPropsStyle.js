@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import smallCard from '../../../../images/smallCardBG.png'
 
 export const CardPropsWrapper = styled.div`
-width: 20%;
+width: 15%;
+height: 200px;
 // width: 362px;
 border-radius: 14px;
 background: #FFFFFF;
@@ -21,20 +22,24 @@ cursor: pointer;
 }
 @media screen and (max-width: 768px ){
 // background: red;
-width: inherit;
+width: 20%;
+// width: inherit;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-// width: 100%;
-margin-top: 10px;
-margin-bottom: 10px;
+margin: 10px;
+// margin-top: 10px;
+// margin-bottom: 10px;
 }
 @media screen and (max-width: 600px ){
+width: inherit;
 padding-top: 30px;
 padding-bottom: 30px;
 padding-left: 0px;
 padding-right: 0px;
+margin-top: 10px;
+margin-bottom: 10px;
 }
 @media screen and (max-width: 425px ){
 padding-top: 30px;

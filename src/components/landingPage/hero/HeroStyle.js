@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import {Link} from "react-router-dom"
 
 export const ParentHero = styled.div`
 // background: grey;
@@ -172,7 +173,7 @@ padding-right: 30px;
 padding-bottom: 30px;
 }
 `;
-export const UserSignupButton = styled.div`
+export const UserSignupButton = styled(Link)`
 background: linear-gradient(289.11deg, #04487F 7.4%, #A0C559 117.27%);
 height: 50px;
 border: none;
@@ -189,6 +190,7 @@ cursor: pointer;
 margin-right: 10px;
 width: 30%;
 transition: width 1s;
+text-decoration: none;
 
 :hover{
     width: 32%;
@@ -265,7 +267,7 @@ export const Img002 = styled.img`
 @media screen and (max-width: 768px){
 }
 `;
-export const MarchantSignUpButton = styled.div`
+export const MarchantSignUpButton = styled(Link)`
 background: #F6FBFF;
 height: 50px;
 border: none;
@@ -281,6 +283,7 @@ align-items: center;
 cursor: pointer;
 width: 30%;
 transition: width 1s;
+text-decoration: none;
 
 :hover{
     width: 33%;

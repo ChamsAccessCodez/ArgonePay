@@ -19,14 +19,14 @@ export const Hero = () => {
             Now you can shop conveniently for goods and pay in bits, with zero paperwork and low interest rates! 
             </Now>
             <FlashButtons>
-                <UserSignupButton>
+                <UserSignupButton to="onboarding">
                     <Text01>user signUp</Text01>
                     <Img002 src={NavArrow} alt="Nav_Arrow" style={{
                         height: "20px",
                         width: "20px"
                     }}/>
                 </UserSignupButton>
-                <MarchantSignUpButton>
+                <MarchantSignUpButton to="onboarding">
                     <Text02>merchant signUp</Text02>
                     <Img003 src={NavArrow2} alt="Nav_Arrow" style={{
                         height: "20px",

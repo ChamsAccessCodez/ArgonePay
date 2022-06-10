@@ -5,6 +5,8 @@ import Argone_Name from '../../../images/ArgoneName.png'
 import NavArrow from '../../../images/NavArrow.png'
 import Headroom from 'react-headroom'
 import { RiMenu4Line, RiCloseFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
     const [toggle, setToggle] = useState(false)
@@ -52,7 +54,7 @@ const Header = () => {
             <SignIn onClick={closeBuggerMenu}>
                 <SignText>SignIn</SignText>
             </SignIn>
-            <SignUp onClick={closeBuggerMenu}>
+            <SignUp to="onboarding" onClick={closeBuggerMenu}>
                 <SignText2>SignUp</SignText2>
                 <img src={NavArrow} alt="sing_text" />
             </SignUp>

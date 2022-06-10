@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Link} from "react-router-dom";
 
 
 export const HeaderContainer = styled.div`
@@ -233,7 +234,7 @@ color: #16AF6D;
 font-size: 20px;
 }
 `;
-export const SignUp = styled.div`
+export const SignUp = styled(Link)`
 background: linear-gradient(289.11deg, #04487F 7.4%, #A0C559 117.27%);
 display: flex;
 justify-content: space-around;
@@ -249,6 +250,7 @@ cursor: pointer;
 font-weight: 400;
 width: 30%;
 transition: width 1s;
+text-decoration: none;
 
 :hover{
     display: flex;
