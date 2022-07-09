@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { createNIN } from "../../Global/state";
+import { getNINdata } from "../../Global/state";
 import Swal from "sweetalert2";
 
 const UserSignUp = () => {
@@ -24,7 +24,7 @@ const UserSignUp = () => {
     ninData: yup
       .string()
       .length(11)
-      .required("Please provide us your NIMC Number"),
+      .required("Kindly input correct 11 digit NIN"),
   });
 
   const {
@@ -43,21 +43,23 @@ const UserSignUp = () => {
     const { ninData } = value;
     try {
       const url =
-        "https://argonepayapi.findfood.ng/api/v1/IdentityVerification/Verify";
+        "https://argonepayapi.findfood.ng/api/v1/IdentityVerification/VerifyNIN";
 
       const response = await axios({
-        method: "post",
-        url: url,
-        data: ninData,
         headers: {
           "Content-Type": "application/json",
           Accept: "*",
           mode: "cors",
         },
+        url: url,
+        method: "post",
+        data: {
+          "nin": ninData,
+        },
       });
-      if (ninData === response.data.data.data.data.nin) {
-        dispatch(createNIN(response.data.data.data.data));
-        console.log(response.data.data.data.data);
+      if (ninData === response.data.data.nin) {
+        dispatch(getNINdata(response.data.data));
+        // console.log(response.data.data);
         Swal.fire({
           position: "top-end",
           icon: "success",
@@ -70,13 +72,36 @@ const UserSignUp = () => {
         // navigate("/userStep1");
       } else {
         Swal.fire({
+          position: "top-end",
           icon: "error",
           title: "Oops...",
           text: "You Provided an Invalid NIN",
         });
+        console.log(response.data.data.nin);
+        console.log(ninData);
+        console.log("thi nin data is shown above");
         navigate("/onboarding");
       }
-      reset();
+      // @Desc TEST: Dummy test for NIN
+      // if (ninData === "57176109497") {
+      //   Swal.fire({
+      //     position: "top-end",
+      //     icon: "success",
+      //     title: "Your NIN is valid",
+      //     showConfirmButton: false,
+      //     timer: 1500,
+      //   }).then(() => {
+      //     navigate("/userStep1");
+      //   });
+      // } else {
+      //   Swal.fire({
+      //     icon: "error",
+      //     title: "Oops...",
+      //     text: "You Provided an Invalid NIN",
+      //   });
+      //   navigate("/onboarding");
+      // }
+      // reset();
     } catch (error) {
       console.error(error.message);
     }

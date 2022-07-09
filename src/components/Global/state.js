@@ -5,15 +5,15 @@ const initialState = {
 };
 
 const state = createSlice({
-  name: "second",
+  name: "NIN",
   initialState,
   reducers: {
-    createNIN: (state, { payload }) => {
-      state.ninInfo = payload;
+    getNINdata: (state, { payload }) => {
+      state.ninData = payload;
     },
   },
 });
 
-export const { createNIN } = state.actions;
+export const { getNINdata } = state.actions;
 
 export default state.reducer;

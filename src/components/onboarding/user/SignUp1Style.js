@@ -12,6 +12,7 @@ export const OnboardingContainer = styled.div`
   align-items: center;
 `;
 export const OnboardingWrapper = styled.div`
+  // background: green;
   width: 400px;
   // width: 25%;
   // background: green;
@@ -185,6 +186,14 @@ export const OneCountry = styled.div`
   margin-top: 10px;
   margin-bottom: 10px;
 `;
+export const OneNin= styled.div`
+  width: 100%;
+  // background-color: blue;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
 export const OneEducation = styled.div`
   width: 100%;
   // background-color: blue;
@@ -200,6 +209,12 @@ export const Left = styled.div`
   margin-left: 10px;
 `;
 export const LeftCountry = styled.div`
+  // background: green;
+  width: 100%;
+  margin-right: 10px;
+  margin-left: 10px;
+`;
+export const LeftNin = styled.div`
   // background: green;
   width: 100%;
   margin-right: 10px;
@@ -266,6 +281,15 @@ export const Gender = styled.div`
   margin-bottom: 10px;
 `;
 export const Country = styled.div`
+  width: 100%;
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: #b7b7b7;
+  margin-bottom: 10px;
+`;
+export const NinNumber = styled.div`
   width: 100%;
   font-family: Helvetica Neue;
   font-size: 14px;
@@ -347,89 +371,96 @@ export const PhoneNumber = styled.div`
   color: #b7b7b7;
   margin-bottom: 10px;
 `;
-export const FirstNameData = styled.div`
-width: 100%;
-height: 20px;
-border: none;
-border-bottom: 1px solid #B7B7B7;
-font-family: Helvetica Neue;
-font-size: 12px;
-font-weight: 500;
-text-align: left;
-color: #B7B7B7;
-text-transform: uppercase;
-
-  }
-  // width: 100%;
-  // height: 30px;
-  // border: none;
-  // border-bottom: 1px solid #B7B7B7;
-
-  // ::placeholder {
-  //   color: #b7b7b7;
-  //   margin-top: 5px;
-  //   margin-bottom: 5px;
-  // }
-`;
-export const MiddleNameData = styled.div`
+export const FirstNameData = styled.input`
+  background: #ffffff;
+  color: #b7b7b7;
   width: 100%;
-  height: 20px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #b7b7b7;
+  text-transform: uppercase;
   font-family: Helvetica Neue;
   font-size: 12px;
   font-weight: 500;
-  text-align: left;
-  color: #b7b7b7;
-  text-transform: uppercase;
+  margin-bottom: 5px;
 `;
-export const LastNameData = styled.div`
+export const MiddleNameData = styled.input`
+  background: #ffffff;
+  color: #b7b7b7;
   width: 100%;
-  height: 20px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #b7b7b7;
+  text-transform: uppercase;
   font-family: Helvetica Neue;
   font-size: 12px;
   font-weight: 500;
-  text-align: left;
-  color: #b7b7b7;
-  text-transform: uppercase;
+  margin-bottom: 5px;
 `;
-export const DobData = styled.div`
+export const LastNameData = styled.input`
+  background: #ffffff;
+  color: #b7b7b7;
   width: 100%;
-  height: 20px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #b7b7b7;
+  text-transform: uppercase;
   font-family: Helvetica Neue;
   font-size: 12px;
   font-weight: 500;
-  text-align: left;
-  color: #b7b7b7;
-  text-transform: uppercase;
+  margin-bottom: 5px;
 `;
-export const GenderData = styled.div`
+export const DobData = styled.input`
+  background: #ffffff;
+  color: #b7b7b7;
   width: 100%;
-  height: 20px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #b7b7b7;
+  text-transform: uppercase;
   font-family: Helvetica Neue;
   font-size: 12px;
   font-weight: 500;
-  text-align: left;
-  color: #b7b7b7;
-  text-transform: uppercase;
+  margin-bottom: 5px;
 `;
-export const CountryData = styled.div`
+export const GenderData = styled.input`
+  background: #ffffff;
+  color: #b7b7b7;
   width: 100%;
-  height: 20px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #b7b7b7;
+  text-transform: uppercase;
   font-family: Helvetica Neue;
   font-size: 12px;
   font-weight: 500;
-  text-align: left;
+  margin-bottom: 5px;
+`;
+export const CountryData = styled.input`
+  background: #ffffff;
   color: #b7b7b7;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #b7b7b7;
   text-transform: uppercase;
+  font-family: Helvetica Neue;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+`;
+export const NInData = styled.input`
+  background: #ffffff;
+  color: #b7b7b7;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #b7b7b7;
+  text-transform: uppercase;
+  font-family: Helvetica Neue;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
 `;
 export const EducationData = styled.div`
   width: 100%;
@@ -445,7 +476,7 @@ export const EducationData = styled.div`
 `;
 export const EmailData = styled.input`
   width: 100%;
-  height: 20px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #b7b7b7;
   font-size: 12px;
@@ -458,7 +489,7 @@ export const EmailData = styled.input`
 `;
 export const AddressData = styled.input`
   width: 100%;
-  height: 20px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #b7b7b7;
   font-size: 12px;
@@ -471,7 +502,7 @@ export const AddressData = styled.input`
 `;
 export const StateData = styled.input`
   width: 100%;
-  height: 20px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #b7b7b7;
   font-size: 12px;
@@ -500,7 +531,7 @@ export const BankData = styled.input`
 `;
 export const AccountData = styled.input`
   width: 100%;
-  height: 20px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #b7b7b7;
   font-size: 12px;
@@ -521,6 +552,7 @@ export const PhoneData = styled.input`
   font-size: 12px;
   text-transform: uppercase;
   background: #fafff0;
+  margin-left: 3px;
 
   ::placeholder {
     color: #707070;
@@ -544,7 +576,7 @@ export const BvnDesc = styled.div`
   margin-bottom: 10px;
 `;
 export const BvnForm = styled.div`
-  width: 95%;
+  width: 93%;
   background: #fafff0;
   border: 1px solid #cdef8a;
   border-radius: 6px;

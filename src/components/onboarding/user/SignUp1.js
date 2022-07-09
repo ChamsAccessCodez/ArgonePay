@@ -19,6 +19,7 @@ import {
   BvnForm,
   Left,
   LeftCountry,
+  LeftNin,
   LeftEducation,
   Right,
   FirstName,
@@ -27,6 +28,7 @@ import {
   LastNameData,
   One,
   OneCountry,
+  OneNin,
   OneEducation,
   MiddleName,
   MiddleNameData,
@@ -37,7 +39,9 @@ import {
   Gender,
   GenderData,
   Country,
+  NinNumber,
   CountryData,
+  NInData,
   Address,
   AddressData,
   State,
@@ -68,9 +72,9 @@ import Help from "../../../images/caution.png";
 
 const SignUp1 = () => {
   // get NIN data
-  const readData = useSelector((state) => state.ninInfo);
+  const userData = useSelector((state) => state.ninData);
   // log NIN data to the terminal
-  console.log(readData);
+  console.log(userData);
 
   return (
     <OnboardingContainer>
@@ -98,62 +102,67 @@ const SignUp1 = () => {
               <One>
                 <Left>
                   <FirstName>First Name</FirstName>
-                  {/* <FirstNameData placeholder="Chams Access Limited" /> */}
-                  <FirstNameData>{readData.firstname}</FirstNameData>
+                  <FirstNameData value={`${userData.firstname}`} readonly />
                 </Left>
                 <Right>
                   <LastName>Last Name</LastName>
-                  <LastNameData>{readData.surname}</LastNameData>
+                  <LastNameData value={`${userData.surname}`} readonly />
                 </Right>
               </One>
               <One>
                 <Left>
                   <MiddleName>Middle Name</MiddleName>
-                  <MiddleNameData>{readData.middlename}</MiddleNameData>
+                  <MiddleNameData value={`${userData.middlename}`} readonly />
                 </Left>
                 <Right>
                   <Email>Email Address</Email>
-                  <EmailData placeholder={`${readData.email}`} />
+                  <EmailData placeholder={`${userData.email}`} />
                 </Right>
               </One>
               <One>
                 <Left>
                   <Dob>Date of Birth</Dob>
-                  <DobData>{readData.birthdate}</DobData>
+                  <DobData value={`${userData.birthdate}`} readonly />
                 </Left>
                 <Right>
                   <Gender>Gender</Gender>
-                  <GenderData>{readData.gender}</GenderData>
+                  <GenderData value={`${userData.gender}`} readonly />
                 </Right>
               </One>
               <OneCountry>
                 <LeftCountry>
                   <Country>Country</Country>
-                  <CountryData>NIGERIA</CountryData>
+                  <CountryData value="Nigeria" readonly />
                 </LeftCountry>
               </OneCountry>
+              <OneNin>
+                <LeftNin>
+                  <NinNumber>NIN</NinNumber>
+                  <NInData value={`${userData.nin}`} readonly />
+                </LeftNin>
+              </OneNin>
               <One>
                 <Left>
                   <Address>Home Address</Address>
                   <AddressData
-                    placeholder={`${readData.residence_AdressLine1}`}
+                    placeholder={`${userData.residence_AdressLine1}`}
                   />
                 </Left>
                 <Right>
                   <State>City / State</State>
-                  <StateData placeholder={`${readData.residence_state}`} />
+                  <StateData placeholder={`${userData.residence_state}`} />
                 </Right>
               </One>
               <OneEducation>
                 <LeftEducation>
                   <Education>Highest Level of Education</Education>
-                  {/* <EducationData>{readData.educationallevel}</EducationData> */}
                   <Select>
                     <option value="" hidden>
-                      {readData.educationallevel}
+                      {userData.educationallevel}
                     </option>
-                    <option value="1">B.Sc</option>
-                    <option value="1">B.Tech</option>
+                    <option>B.Sc</option>
+                    <option>B.Sc</option>
+                    <option value="9">B.Tech</option>
                     <option value="2">B.A</option>
                     <option value="3">B.Ed</option>
                     <option value="4">B.Sc(Ed)</option>
