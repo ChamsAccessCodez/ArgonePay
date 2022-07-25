@@ -36,7 +36,7 @@ flex-direction: column;
 `;
 export const TextWrapper = styled.div`
 // background-color: grey;
-width: 40%;
+width: 35%;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -71,7 +71,7 @@ export const CircleText = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
-margin-top: 40px;
+// margin-top: 40px;
 
 @media screen and (max-width: 768px){
 width: 100vw;
@@ -112,7 +112,7 @@ margin-bottom: 15px;
  `;
 export const CardWrapper = styled.div`
 // background-color: tomato;
-width: 60%;
+width: 65%;
 display: flex;
 flex-direction: column;
 // align-items: center;
@@ -128,7 +128,7 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-// background-color: tomato;
+// background-color: green;
 flex-wrap: wrap;
 
 @media screen and (max-width: 768px){
@@ -180,8 +180,8 @@ z-index: 0;
 }
 `;
 export const Card = styled.div`
-height: 300px;
-width: 326px;
+height: 250px;
+width: 300px;
 border-radius: 8px;
 background: #FFFFFF;
 box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -242,7 +242,7 @@ text-align: left;
 color: #37383C;
 `;
 export const Four = styled.div`
-width: 52%;
+width: 55%;
 display: flex;
 justify-content: flex-start;
 align-items: center;

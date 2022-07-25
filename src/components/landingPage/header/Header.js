@@ -38,13 +38,13 @@ const Header = () => {
         <MobileCover onclick={changeBuggerMenu} toggle={toggle} >
         <ArgoneNavs>
             <Items onClick={closeBuggerMenu}>
-                <Products>Products</Products>
+                <Products>How it works</Products>
             </Items>
             <Items onClick={closeBuggerMenu}>
                 <Developers>Developers</Developers>
             </Items>
             <Items onClick={closeBuggerMenu}>
-                <Faq>FAQ</Faq>
+                <Faq>FAQ's</Faq>
             </Items>
             <Items onClick={closeBuggerMenu}>
                 <Contact>Contact</Contact>
